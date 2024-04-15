@@ -18,11 +18,11 @@ public class QuickSort {
         }
 
         public static int part(int[] array, int l, int r) {
-            int pivto = array[r];
+            int pivot = array[r];
             int i = l - 1;
             int temp, j;
             for (j = l; j < r; j++) {
-                if (array[j] < pivto) {
+                if (array[j] < pivot) {
                     i++;
                     temp = array[i];
                     array[i] = array[j];
@@ -30,7 +30,7 @@ public class QuickSort {
                 }
             }
             temp = array[i + 1];
-            array[i + 1] = pivto;
+            array[i + 1] = array[r];
             array[r] = temp;
             return i + 1;
         }
