@@ -5,21 +5,21 @@ public class BubbleSort {
     static Logger logger = Logger.getLogger("");
 
     class Sort {
-        public static void bubbleSort(int[] haystack) {
-            int n = haystack.length;
+        public static void bubbleSort(int[] array) {
+            int n = array.length;
+            int i, j, temp;
             boolean swapped;
-            int temp;
-            for (int i = 0; i < n; i++) {
+            for (i = 0; i < n; i++) {
                 swapped = false;
-                for (int j = 0; j < n - i - 1; j++) {
-                    if (haystack[j] > haystack[j + 1]) {
-                        temp = haystack[j];
-                        haystack[j] = haystack[j + 1];
-                        haystack[j + 1] = temp;
+                for (j = 0; j < n - 1 - i; j++) {
+                    if (array[j] > array[j + 1]) {
+                        temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
                         swapped = true;
                     }
                 }
-                if (swapped = false) {
+                if(swapped == false){
                     break;
                 }
             }

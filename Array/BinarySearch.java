@@ -5,15 +5,15 @@ public class BinarySearch {
     static Logger logger = Logger.getLogger("");
 
     class Search {
-        public static int binSearch(int[] haystack, int needle) {
-            int r = haystack.length - 1;
+        public static int binSearch(int[] hayStack, int needle) {
             int l = 0;
+            int r = hayStack.length - 1;
             int m;
             while (l <= r) {
                 m = (l + r) / 2;
-                if (haystack[m] == needle) {
+                if (hayStack[m] == needle) {
                     return m;
-                } else if (needle > haystack[m]) {
+                } else if (needle > hayStack[m]) {
                     l = m + 1;
                 } else {
                     r = m - 1;
