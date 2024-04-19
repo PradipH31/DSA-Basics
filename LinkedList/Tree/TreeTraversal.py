@@ -26,6 +26,17 @@ def post_order(root: Node):
         print(root.value, end='-')
 
 
+def breadth_first(root: Node):
+    queue = [root]
+    while len(queue) != 0:
+        curr = queue.pop(0)
+        print(curr.value, end='-')
+        if curr.left:
+            queue.append(curr.left)
+        if curr.right:
+            queue.append(curr.right)
+
+
 root = Node(65)
 root.left = Node(52)
 root.left.left = Node(46)
@@ -37,3 +48,4 @@ root.right.right = Node(99)
 print(pre_order(root), '')
 print(in_order(root), '')
 print(post_order(root), '')
+print(breadth_first(root), '')
