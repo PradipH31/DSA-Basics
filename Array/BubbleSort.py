@@ -1,4 +1,4 @@
-def bubbleSort(array):
+def bubble_sort(array):
     n = len(array)
     for i in range(n):
         swapped = False
@@ -10,5 +10,5 @@ def bubbleSort(array):
             break
 
 arr = [9, 1, 5, 43, 32, 22, 19, 90, 55, 66, 45, 88]
-bubbleSort(arr)
+bubble_sort(arr)
 print(arr)
